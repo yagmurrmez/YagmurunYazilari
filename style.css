@@ -68,4 +68,10 @@ section {
     }
 }
 
+footer p {
+    color: #0000ff; /* Rengi mavi yapıyoruz */
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
 
