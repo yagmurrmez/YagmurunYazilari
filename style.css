@@ -67,16 +67,22 @@ section {
 }
 
 .about-container {
-  text-align: center;
   font-size: 1.1rem;
   line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  /* text-align: center;  ← BUNU KALDIR veya yorum satırına al */
+  text-align: left; /* Sola yaslı hale getiriyoruz */
 }
 
+  
 .about-container h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #0a3d62;
+  text-align: center;
 }
+.about-container p {
+  text-align: left;
+}
+
 
 /* Footer */
 footer {
