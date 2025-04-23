@@ -1,92 +1,104 @@
-/* Sayfa genel stil ayarları */
+/* Temel stil ayarları */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-/* "İletişim" bölümü için özel stil */
-#contact {
-    background-color: #e2e2e2;
-}
-
-
-header {
-    background-color: #333; /* Başlık arka plan rengini koyu gri yapıyoruz */
-    color: white; /* Başlık metninin rengini beyaz yapıyoruz */
-    padding: 20px; /* Başlık etrafında boşluk bırakıyoruz */
-    text-align: center; /* Metni ortalıyoruz */
-
-}
-
-section {
-    margin-top: 20px; /* İçerik kısmı ile başlık arasına boşluk bırakıyoruz */
-    padding: 15px; /* İçeriğin etrafına boşluk ekliyoruz */
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Mobil cihazlarda font boyutunu küçültüyoruz */
-    }
-
-    header {
-        padding: 10px; /* Başlık etrafındaki boşluğu küçültüyoruz */
-    }
-    
-    header nav {
-        flex-direction: column; /* Menü öğelerini dikey yapıyoruz */
-    }
-}
-
-footer p {
-    color: #0000ff; /* Rengi mavi yapıyoruz */
-    font-size: 14px;
-    text-align: center;
-    margin-top: 20px;
-}
-@media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Mobil cihazlarda font boyutunu küçültüyoruz */
-    }
-
-    header {
-        padding: 10px; /* Başlık etrafındaki boşluğu mobilde biraz küçültüyoruz */
-    }
-
-    p {
-        margin-bottom: 15px; /* Paragraflar arasındaki boşluğu mobilde daha küçük yapıyoruz */
-    }
-
-    section {
-        padding: 15px; /* İçerik etrafındaki boşluğu mobilde daha küçük yapıyoruz */
-    }
-}
-.about-section {
-  background-color: #f0f8ff; /* Açık mavi – dilersen değiştirilebilir */
-  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+  background-color: #a2c4c9;
   color: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Başlık */
+header {
+  background-color: #5b5b5b;
+  color: white;
+  padding: 20px;
   text-align: center;
 }
 
-.about-container {
+/* Navigasyon */
+nav {
+  background-color: #4a4a4a;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* İçerik */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e9f1f3;
+  border-radius: 10px;
   max-width: 800px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hakkımda bölümü */
+#hakkimda {
+  background-color: #f0f8ff;
+}
+
+.about-container {
+  text-align: center;
   font-size: 1.1rem;
   line-height: 1.8;
 }
 
-.about-section h2 {
+.about-container h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #0a3d62;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Footer */
+footer {
+  background-color: #5b5b5b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
 }
 
-html, body {
-  min-height: 100vh;
+/* Responsive (mobil uyumlu) */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  section {
+    padding: 15px;
+  }
 }
