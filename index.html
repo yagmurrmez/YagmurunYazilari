@@ -28,22 +28,49 @@
             width: 100%;
             bottom: 0;
         }
+
+        /* Hakkımda metni başlangıçta gizli */
+        #hakkimda {
+            display: none;
+            padding: 20px;
+            background-color: #f0f8ff;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        /* Buton stili */
+        #showHakkimdaBtn {
+            padding: 10px 20px;
+            background-color: #5b5b5b;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #showHakkimdaBtn:hover {
+            background-color: #444;
+        }
+
         h1 {
             font-size: 2em;
         }
+
     </style>
+
 </head>
 <body>
 
     <header>
         <h1>Yağmur'un Yazıları</h1>
     </header>
-<!-- Üst kısımda bir "Hakkımda" tuşu -->
-<nav>
-  <ul style="list-style: none; display: flex; justify-content: center; gap: 20px;">
-    <li><a href="#hakkimda" style="text-decoration: none; font-weight: bold;">Hakkımda</a></li>
-  </ul>
-</nav>
+
+    <!-- Üst kısımda bir "Hakkımda" tuşu -->
+    <nav>
+        <ul style="list-style: none; display: flex; justify-content: center; gap: 20px;">
+            <li><a href="javascript:void(0);" id="showHakkimdaBtn" style="text-decoration: none; font-weight: bold;">Hakkımda</a></li>
+        </ul>
+    </nav>
+
     <main>
         <section>
             <h2>Hoş geldiniz!</h2>
@@ -54,27 +81,40 @@
             </ul>
         </section>
     </main>
-<section id="hakkimda" class="about-section">
-  <div class="about-container">
-    <h2>Beni Tanıyın!</h2>
-    <p>
-      Ben Yağmur! Annemin babamın kızı, kocamın kraliçesi, çocuğumun annesi, sınıfın en çalışkanı, öğretmenlerin gurur duyduğu öğrenci olmadan önce size tanıtmam gereken biri var. <br><br>
-      Ben Yağmur. Yapmayı sevdiğim çok şey var: Bisiklete binmeyi, paten kaymayı severim; kitaplar, dergiler okurum. Önceden yapılmış deneyleri tekrarlayıp bunu ilk bulan kişinin nasıl hissettiğini deneyimlemeyi severim, resim çizerim, ders çalışırım, lunaparktaki oyuncaklara binmeye bayılırım, risk almak bana yaşadığımı hissettirir, özgürlüğe gereğinden fazla önem veririm,
-     çok inatçı değilim. Bir şey olmadıysa tamam diyip başka bir işe koyulurum. Yeni insanlarla tanışmayı seviyorum ama dışarıdan inanılmaz mesafeli görünürüm. Yeni şeyler denemeyi seviyorum. Aklınıza gelebilecek her şeyi denemek istiyorum! ve son olarak bu yazıyı okuyabilmenizin nedeni; yazı yazmaya bayılırım! <br><br>
-      Risk almak bana yaşadığımı hissettirir. Özgürlüğe gereğinden fazla önem veririm. Dışarıdan mesafeli görünsem de yeni insanlarla tanışmayı severim. Yeni şeyler denemek benim için heyecan verici. Yazmayı çok severim. <br><br>
-      Çoğu konuda fikirlerim sürekli değişiyor ama düşünüyorum, yazıyorum ve üretiyorum. Şimdilik tüm amacım da bu. <br><br>
-      Demek istediğim; hiçbir insan sadece başkalarının bir şeyi olarak tanımlanabilecek kadar basit bir varlık değil. Tek başımıza kendimiz olarak farklı tarzlarımız var ve bu yüzden değerliyiz. Kendinizi tanırsanız başkalarının sizin için etiket bulmasına gerek kalmaz.  <br><br>
 
-    </p>
-<p>Tanıştığıma memnun oldum! Peki ya siz?</p>
+    <!-- Hakkımda metni burada olacak ama başlangıçta gizli -->
+    <section id="hakkimda">
+        <h2>Beni Tanıyın!</h2>
+        <p>
+            Ben Yağmur! Annemin babamın kızı, kocamın kraliçesi, çocuğumun annesi, sınıfın en çalışkanı, öğretmenlerin gurur duyduğu öğrenci olmadan önce size tanıtmam gereken biri var. <br><br>
+            Yapmayı sevdiğim çok şey var: Bisiklete binmeyi, paten kaymayı severim; kitaplar, dergiler okurum. Önceden yapılmış deneyleri tekrarlayıp bunu ilk bulan kişinin nasıl hissettiğini deneyimlemeyi severim, resim çizerim, ders çalışırım, lunaparktaki oyuncaklara binmeye bayılırım, risk almak bana yaşadığımı hissettirir, özgürlüğe gereğinden fazla önem veririm, çok inatçı değilim. Bir şey olmadıysa tamam diyip başka bir işe koyulurum. Yeni insanlarla tanışmayı seviyorum ama dışarıdan inanılmaz mesafeli görünürüm. Yeni şeyler denemeyi seviyorum. Aklınıza gelebilecek her şeyi denemek istiyorum! ve son olarak bu yazıyı okuyabilmenizin nedeni; yazı yazmaya bayılırım! <br><br>
+            Risk almak bana yaşadığımı hissettirir. Özgürlüğe gereğinden fazla önem veririm. Dışarıdan mesafeli görünsem de yeni insanlarla tanışmayı severim. Yeni şeyler denemek benim için heyecan verici. Yazmayı çok severim. <br><br>
+            Çoğu konuda fikirlerim sürekli değişiyor ama düşünüyorum, yazıyorum ve üretiyorum. Şimdilik tüm amacım da bu. <br><br>
+            Demek istediğim; hiçbir insan sadece başkalarının bir şeyi olarak tanımlanabilecek kadar basit bir varlık değil. Tek başımıza kendimiz olarak farklı tarzlarımız var ve bu yüzden değerliyiz. Kendinizi tanırsanız başkalarının sizin için etiket bulmasına gerek kalmaz. <br><br>
+        </p>
+        <p>Tanıştığıma memnun oldum! Peki ya siz?</p>
+    </section>
 
-<section style="height: 800px;"></section>
-<a href="#hakkimda">Hakkımda</a>
     <footer>
         <p>&copy; 2025 Yağmur</p>
     </footer>
+
+    <script>
+        // Hakkımda butonuna tıklandığında metni göster/gizle
+        document.getElementById("showHakkimdaBtn").addEventListener("click", function(event) {
+            event.preventDefault(); // Sayfanın kaymasını engelliyoruz (link davranışını önlüyoruz)
+            var hakkimda = document.getElementById("hakkimda");
+            if (hakkimda.style.display === "none" || hakkimda.style.display === "") {
+                hakkimda.style.display = "block"; // Metni göster
+            } else {
+                hakkimda.style.display = "none"; // Metni gizle
+            }
+        });
+    </script>
+
 </body>
 </html>
+
 
 
 
