@@ -18,10 +18,7 @@ header {
     color: white; /* Başlık metninin rengini beyaz yapıyoruz */
     padding: 20px; /* Başlık etrafında boşluk bırakıyoruz */
     text-align: center; /* Metni ortalıyoruz */
-}
 
-header {
-    padding: 20px; /* Başlık etrafında boşluk bırakıyoruz */
 }
 
 section {
@@ -65,5 +62,24 @@ footer p {
     section {
         padding: 15px; /* İçerik etrafındaki boşluğu mobilde daha küçük yapıyoruz */
     }
+}
+.about-section {
+  background-color: #f0f8ff; /* Açık mavi – dilersen değiştirilebilir */
+  padding: 60px 20px;
+  color: #333;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0a3d62;
 }
 
