@@ -74,4 +74,21 @@ footer p {
     text-align: center;
     margin-top: 20px;
 }
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Mobil cihazlarda font boyutunu küçültüyoruz */
+    }
+
+    header {
+        padding: 10px; /* Başlık etrafındaki boşluğu mobilde biraz küçültüyoruz */
+    }
+
+    p {
+        margin-bottom: 15px; /* Paragraflar arasındaki boşluğu mobilde daha küçük yapıyoruz */
+    }
+
+    section {
+        padding: 15px; /* İçerik etrafındaki boşluğu mobilde daha küçük yapıyoruz */
+    }
+}
 
