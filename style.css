@@ -36,3 +36,36 @@ section {
 #contact {
     background-color: #e2e2e2;
 }
+
+
+header {
+    background-color: #333; /* Başlık arka plan rengini koyu gri yapıyoruz */
+    color: white; /* Başlık metninin rengini beyaz yapıyoruz */
+    padding: 20px; /* Başlık etrafında boşluk bırakıyoruz */
+    text-align: center; /* Metni ortalıyoruz */
+}
+
+header {
+    padding: 20px; /* Başlık etrafında boşluk bırakıyoruz */
+}
+
+section {
+    margin-top: 20px; /* İçerik kısmı ile başlık arasına boşluk bırakıyoruz */
+    padding: 15px; /* İçeriğin etrafına boşluk ekliyoruz */
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Mobil cihazlarda font boyutunu küçültüyoruz */
+    }
+
+    header {
+        padding: 10px; /* Başlık etrafındaki boşluğu küçültüyoruz */
+    }
+    
+    header nav {
+        flex-direction: column; /* Menü öğelerini dikey yapıyoruz */
+    }
+}
+
+
