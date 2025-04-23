@@ -16,6 +16,8 @@
     }
   </style>
 </head>
+  <script defer src="https://cdn.commento.io/js/commento.js"></script>
+
 <body>
   <h1>Mükemmeliyetçilik</h1>
   
@@ -74,8 +76,14 @@ Bunun tembelliğe sebep olması da çok olası. Çünkü bir işi mükemmel yapa
   <p><strong>Mükemmel, iyinin düşmanıdır!</strong></p>
 
   <p><em>Sağlıcakla kalın!</em></p>
-<script defer src="https://cdn.commento.io/js/commento.js"></script>
-<div id="commento"></div>
+  
+  <script>
+  window.addEventListener('load', function() {
+    var commento = document.getElementById('commento');
+    commento.setAttribute('data-page-id', window.location.href); // Sayfa URL'sini kullanarak her sayfa için ayrı yorumlar
+  });
+</script>
+
 </body>
 </html>
 
