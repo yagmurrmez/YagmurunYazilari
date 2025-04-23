@@ -7,31 +7,6 @@ body {
     padding: 0;
 }
 
-/* Başlık kısmı */
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Menü linkleri */
-header nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-/* Sayfa içeriği */
-section {
-    padding: 20px;
-}
-
-/* "Hakkında" bölümü için özel stil */
-#about {
-    background-color: #fff;
-}
-
 /* "İletişim" bölümü için özel stil */
 #contact {
     background-color: #e2e2e2;
