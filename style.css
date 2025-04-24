@@ -114,9 +114,9 @@ footer {
   font-weight: bold;
 }
 
-footer {
-  /* position: fixed; ← Bunu geçici olarak yoruma al */
-  position: static;
+main {
+  padding-bottom: 60px; /* Footer yüksekliğinden biraz fazla bir boşluk */
 }
+
 
 
