@@ -51,6 +51,10 @@ nav a:hover {
 /* İçerik */
 main {
   padding: 20px;
+
+  min-height: calc(100vh - 100px); /* header + footer yüksekliklerini çıkarıyoruz */
+  padding-bottom: 80px; /* footer'a çarpmasın */
+
 }
 
 section {
