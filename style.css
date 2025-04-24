@@ -97,6 +97,7 @@ footer {
   text-align: center;
   padding: 15px;
   margin-top: 40px;
+  position: static;
 }
 
 /* Responsive (mobil uyumlu) */
