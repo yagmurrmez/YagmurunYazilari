@@ -114,4 +114,9 @@ footer {
   font-weight: bold;
 }
 
+footer {
+  /* position: fixed; ← Bunu geçici olarak yoruma al */
+  position: static;
+}
+
 
