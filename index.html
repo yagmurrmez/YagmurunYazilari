@@ -1,123 +1,108 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yağmur'un Yazıları</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yağmur'un Yazıları</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #a2c4c9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #5b5b5b;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #5b5b5b;
-            color: white;
-            width: 100%;
-            bottom: 0;
-        }
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.1/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-        /* Hakkımda metni başlangıçta gizli */
-        #hakkimda {
-            display: none;
-            padding: 20px;
-            background-color: #f0f8ff;
-            margin-top: 20px;
-            color: #333;
-        }
-
-        /* Buton stili */
-        #showHakkimdaBtn {
-            padding: 10px 20px;
-            background-color: #5b5b5b;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        #showHakkimdaBtn:hover {
-            background-color: #444;
-        }
-
-        h1 {
-            font-size: 2em;
-        }
-
-    </style>
-
+  <style>
+    body {
+      background-color: #a2c4c9;
+      color: #333;
+    }
+    footer {
+      background-color: #5b5b5b;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    #hakkimda {
+      display: none;
+      background-color: #f0f8ff;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      border-radius: 8px;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-<nav>
-  <ul style="list-style: none; display: flex; gap: 20px; padding: 0;">
-    <li><a href="iletisim.html">İletişim</a></li>
-  </ul>
-</nav>
-        
-        <h1>Yağmur'un Yazıları</h1>
-    </header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Yağmur'un Yazıları</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Üst kısımda bir "Hakkımda" tuşu -->
-    <nav>
-        <ul style="list-style: none; display: flex; justify-content: center; gap: 20px;">
-            <li><a href="javascript:void(0);" id="showHakkimdaBtn" style="text-decoration: none; font-weight: bold;">Hakkımda</a></li>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0);" id="showHakkimdaBtn">Hakkımda</a>
+          </li>
         </ul>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-    <main>
-        <section>
-            <h2>Hoş geldiniz!</h2>
-            <p>Bu site daha çok yeni, geliştirmeye çalışıyorum. Buradan birkaç yazıya ulaşabilirsiniz:</p>
-            <ul>
-                <li><a href="mukemmeliyetcilik.html">Mükemmeliyetçilik</a></li>
-                <li><a href="ıdealogretmen.html">İdeal Öğretmenin Anatomisi</a></li>
-             <li><a href="saygı.html">Saygının Referans Noktasına Göre Değişmesi</a></li>
-                <li><a href="Hayranlık.html">Hayranlık</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <!-- Hakkımda metni burada olacak ama başlangıçta gizli -->
-    <section id="hakkimda">
-        <h2>Beni Tanıyın!</h2>
-        <p>Ben Yağmur! Annemin babamın kızı, sınıfın en çalışkanı, kocamın kraliçesi, çocuğumun annesi, öğretmenlerin gurur duyduğu öğrenci olmadan önce size tanıtmam gereken biri var.</p>
-           <p>Yapmayı sevdiğim çok şey var: Bisiklete binmeyi, paten kaymayı severim; kitaplar, dergiler okurum. Önceden yapılmış deneyleri tekrarlayıp bunu ilk bulan kişinin nasıl hissettiğini deneyimlemeyi severim, resim çizerim, ders çalışırım, lunaparktaki oyuncaklara binmeye bayılırım, risk almak bana yaşadığımı hissettirir, özgürlüğe gereğinden fazla önem veririm, çok inatçı değilim. Bir şey olmadıysa tamam diyip başka bir işe koyulurum. Yeni insanlarla tanışmayı seviyorum ama dışarıdan inanılmaz mesafeli görünürüm. Yeni şeyler denemeyi seviyorum. Aklınıza gelebilecek her şeyi denemek istiyorum! <strong>ve son olarak</strong> bu yazıyı okuyabilmenizin nedeni; yazı yazmaya bayılırım! </p>
-        <p>Demek istediğim; hiçbir insan sadece başkalarının bir şeyi olarak tanımlanabilecek kadar basit bir varlık değil. Tek başımıza kendimiz olarak farklı tarzlarımız var ve bu yüzden değerliyiz. Kendinizi tanırsanız başkalarının sizin için etiket bulmasına gerek kalmaz.
- <strong>Tanıştığıma memnun oldum! Peki ya siz?</strong></p>
-
+  <!-- Main Content -->
+  <main class="container my-5">
+    <section>
+      <h2>Hoş geldiniz!</h2>
+      <p>Bu site daha çok yeni, geliştirmeye çalışıyorum. Buradan birkaç yazıya ulaşabilirsiniz:</p>
+      <ul>
+        <li><a href="mukemmeliyetcilik.html">Mükemmeliyetçilik</a></li>
+        <li><a href="ıdealogretmen.html">İdeal Öğretmenin Anatomisi</a></li>
+        <li><a href="saygı.html">Saygının Referans Noktasına Göre Değişmesi</a></li>
+        <li><a href="Hayranlık.html">Hayranlık</a></li>
+      </ul>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Yağmur</p>
-    </footer>
+    <section id="hakkimda" class="mt-4">
+      <h2>Beni Tanıyın!</h2>
+      <p>Ben Yağmur! Annemin babamın kızı, sınıfın en çalışkanı, kocamın kraliçesi, çocuğumun annesi, öğretmenlerin gurur duyduğu öğrenci olmadan önce size tanıtmam gereken biri var.</p>
+      <p>Yapmayı sevdiğim çok şey var: Bisiklete binmeyi, paten kaymayı severim; kitaplar, dergiler okurum. Önceden yapılmış deneyleri tekrarlayıp bunu ilk bulan kişinin nasıl hissettiğini deneyimlemeyi severim, resim çizerim, ders çalışırım, lunaparktaki oyuncaklara binmeye bayılırım, risk almak bana yaşadığımı hissettirir, özgürlüğe gereğinden fazla önem veririm, çok inatçı değilim. Bir şey olmadıysa tamam diyip başka bir işe koyulurum. Yeni insanlarla tanışmayı seviyorum ama dışarıdan inanılmaz mesafeli görünürüm. Yeni şeyler denemeyi seviyorum. Aklınıza gelebilecek her şeyi denemek istiyorum! <strong>ve son olarak</strong> bu yazıyı okuyabilmenizin nedeni; yazı yazmaya bayılırım!</p>
+      <p>Demek istediğim; hiçbir insan sadece başkalarının bir şeyi olarak tanımlanabilecek kadar basit bir varlık değil. Tek başımıza kendimiz olarak farklı tarzlarımız var ve bu yüzden değerliyiz. Kendinizi tanırsanız başkalarının sizin için etiket bulmasına gerek kalmaz. <strong>Tanıştığıma memnun oldum! Peki ya siz?</strong></p>
+    </section>
+  </main>
 
-    <script>
-        // Hakkımda butonuna tıklandığında metni göster/gizle
-        document.getElementById("showHakkimdaBtn").addEventListener("click", function(event) {
-            event.preventDefault(); // Sayfanın kaymasını engelliyoruz (link davranışını önlüyoruz)
-            var hakkimda = document.getElementById("hakkimda");
-            if (hakkimda.style.display === "none" || hakkimda.style.display === "") {
-                hakkimda.style.display = "block"; // Metni göster
-            } else {
-                hakkimda.style.display = "none"; // Metni gizle
-            }
-        });
-    </script>
+  <footer>
+    <p>&copy; 2025 Yağmur</p>
+  </footer>
 
+  <!-- Bootstrap JS Bundle (Popper + Bootstrap JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Hakkımda bölümünü göster/gizle
+    document.getElementById("showHakkimdaBtn").addEventListener("click", function (e) {
+      e.preventDefault();
+      const hakkimda = document.getElementById("hakkimda");
+      if (hakkimda.style.display === "none" || hakkimda.style.display === "") {
+        hakkimda.style.display = "block";
+      } else {
+        hakkimda.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
+
 
 
 
