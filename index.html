@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Yağmur'un Yazıları</title>
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,100 +25,181 @@
             color: white;
             width: 100%;
             bottom: 0;
+            position: fixed;
         }
-
-        /* Hakkımda metni başlangıçta gizli */
-        #hakkimda {
-            display: none;
-            padding: 20px;
-            background-color: #f0f8ff;
-            margin-top: 20px;
-            color: #333;
+        nav.main-nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px 0;
         }
-
-        /* Buton stili */
-        #showHakkimdaBtn {
+        nav.main-nav button {
+            background-color: #5b5b5b;
+            border: none;
             padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        nav.main-nav button:hover,
+        nav.main-nav button.active {
+            background-color: #222;
+        }
+        nav.top-nav {
             background-color: #5b5b5b;
             color: white;
-            border: none;
-            cursor: pointer;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-end;
         }
-
-        #showHakkimdaBtn:hover {
-            background-color: #444;
+        nav.top-nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
         }
-
-        h1 {
-            font-size: 2em;
+        nav.top-nav a:hover {
+            text-decoration: underline;
         }
-
+        main {
+            max-width: 900px;
+            margin: 20px auto 80px;
+            padding: 0 20px;
+            background-color: #f0f8ff;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        #hakkimda {
+            margin-top: 20px;
+            background-color: #e3f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            color: #222;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin: 8px 0;
+        }
     </style>
-
 </head>
 <body>
 
     <header>
-<nav>
-  <ul style="list-style: none; display: flex; gap: 20px; padding: 0;">
-    <li><a href="iletisim.html">İletişim</a></li>
-  </ul>
-</nav>
-        
         <h1>Yağmur'un Yazıları</h1>
     </header>
 
-    <!-- Üst kısımda bir "Hakkımda" tuşu -->
-    <nav>
-        <ul style="list-style: none; display: flex; justify-content: center; gap: 20px;">
-            <li><a href="javascript:void(0);" id="showHakkimdaBtn" style="text-decoration: none; font-weight: bold;">Hakkımda</a></li>
-        </ul>
+    <!-- Üstte İletişim ve Hakkımda linkleri -->
+    <nav class="top-nav">
+        <a href="iletisim.html">İletişim</a>
+        <a href="#" id="showHakkimdaBtn">Hakkımda</a>
+    </nav>
+
+    <!-- Kategori butonları -->
+    <nav class="main-nav">
+        <button class="kategoriBtn active" data-kategori="felsefe">Felsefe</button>
+        <button class="kategoriBtn" data-kategori="deney">Deney</button>
+        <button class="kategoriBtn" data-kategori="kitap">Kitap</button>
     </nav>
 
     <main>
-        <section>
-            <h2>Hoş geldiniz!</h2>
-            <p>Bu site daha çok yeni, geliştirmeye çalışıyorum. Buradan birkaç yazıya ulaşabilirsiniz:</p>
+
+        <!-- Hakkımda Bölümü Başlangıçta gizli -->
+        <section id="hakkimda" style="display:none;">
+            <h2>Beni Tanıyın!</h2>
+            <p>Ben Yağmur! Annemin babamın kızı, sınıfın en çalışkanı, kocamın kraliçesi, çocuğumun annesi, öğretmenlerin gurur duyduğu öğrenci olmadan önce size tanıtmam gereken biri var.</p>
+            <p>Yapmayı sevdiğim çok şey var: Bisiklete binmeyi, paten kaymayı severim; kitaplar, dergiler okurum. Önceden yapılmış deneyleri tekrarlayıp bunu ilk bulan kişinin nasıl hissettiğini deneyimlemeyi severim, resim çizerim, ders çalışırım, lunaparktaki oyuncaklara binmeye bayılırım, risk almak bana yaşadığımı hissettirir, özgürlüğe gereğinden fazla önem veririm, çok inatçı değilim. Bir şey olmadıysa tamam diyip başka bir işe koyulurum. Yeni insanlarla tanışmayı seviyorum ama dışarıdan inanılmaz mesafeli görünürüm. Yeni şeyler denemeyi seviyorum. Aklınıza gelebilecek her şeyi denemek istiyorum! <strong>ve son olarak</strong> bu yazıyı okuyabilmenizin nedeni; yazı yazmaya bayılırım!</p>
+            <p>Demek istediğim; hiçbir insan sadece başkalarının bir şeyi olarak tanımlanabilecek kadar basit bir varlık değil. Tek başımıza kendimiz olarak farklı tarzlarımız var ve bu yüzden değerliyiz. Kendinizi tanırsanız başkalarının sizin için etiket bulmasına gerek kalmaz. <strong>Tanıştığıma memnun oldum! Peki ya siz?</strong></p>
+        </section>
+
+        <!-- FELSEFE Bölümü -->
+        <section id="felsefe" class="active">
+            <h2>Felsefe Yazıları</h2>
             <ul>
                 <li><a href="mukemmeliyetcilik.html">Mükemmeliyetçilik</a></li>
                 <li><a href="ıdealogretmen.html">İdeal Öğretmenin Anatomisi</a></li>
-             <li><a href="saygı.html">Saygının Referans Noktasına Göre Değişmesi</a></li>
+                <li><a href="saygı.html">Saygının Referans Noktasına Göre Değişmesi</a></li>
                 <li><a href="Hayranlık.html">Hayranlık</a></li>
             </ul>
         </section>
+
+        <!-- DENEY Bölümü -->
+        <section id="deney">
+            <h2>Maket ve Deneyler</h2>
+            <ul>
+                <li><a href="elektrik_motoru.html">Basit Elektrik Motoru Yapımı</a></li>
+                <li><a href="drone_projesi.html">Drone Projesi</a></li>
+                <!-- Buraya deney yazılarını ekleyebilirsin -->
+            </ul>
+        </section>
+
+        <!-- KİTAP Bölümü -->
+        <section id="kitap">
+            <h2>Kitaplar</h2>
+            <ul>
+                <li><a href="oblomov.html">Oblomov</a></li>
+                <li><a href="simyaci.html">Simyacı</a></li>
+                <li><a href="korsluk.html">Körlük</a></li>
+                <!-- Buraya kitap yazılarını ekleyebilirsin -->
+            </ul>
+        </section>
+
     </main>
-
-    <!-- Hakkımda metni burada olacak ama başlangıçta gizli -->
-    <section id="hakkimda">
-        <h2>Beni Tanıyın!</h2>
-        <p>Ben Yağmur! Annemin babamın kızı, sınıfın en çalışkanı, kocamın kraliçesi, çocuğumun annesi, öğretmenlerin gurur duyduğu öğrenci olmadan önce size tanıtmam gereken biri var.</p>
-           <p>Yapmayı sevdiğim çok şey var: Bisiklete binmeyi, paten kaymayı severim; kitaplar, dergiler okurum. Önceden yapılmış deneyleri tekrarlayıp bunu ilk bulan kişinin nasıl hissettiğini deneyimlemeyi severim, resim çizerim, ders çalışırım, lunaparktaki oyuncaklara binmeye bayılırım, risk almak bana yaşadığımı hissettirir, özgürlüğe gereğinden fazla önem veririm, çok inatçı değilim. Bir şey olmadıysa tamam diyip başka bir işe koyulurum. Yeni insanlarla tanışmayı seviyorum ama dışarıdan inanılmaz mesafeli görünürüm. Yeni şeyler denemeyi seviyorum. Aklınıza gelebilecek her şeyi denemek istiyorum! <strong>ve son olarak</strong> bu yazıyı okuyabilmenizin nedeni; yazı yazmaya bayılırım! </p>
-        <p>Demek istediğim; hiçbir insan sadece başkalarının bir şeyi olarak tanımlanabilecek kadar basit bir varlık değil. Tek başımıza kendimiz olarak farklı tarzlarımız var ve bu yüzden değerliyiz. Kendinizi tanırsanız başkalarının sizin için etiket bulmasına gerek kalmaz.
- <strong>Tanıştığıma memnun oldum! Peki ya siz?</strong></p>
-
-    </section>
 
     <footer>
         <p>&copy; 2025 Yağmur</p>
     </footer>
 
     <script>
-        // Hakkımda butonuna tıklandığında metni göster/gizle
-        document.getElementById("showHakkimdaBtn").addEventListener("click", function(event) {
-            event.preventDefault(); // Sayfanın kaymasını engelliyoruz (link davranışını önlüyoruz)
-            var hakkimda = document.getElementById("hakkimda");
+        // Hakkımda linkine tıklayınca göster/gizle
+        document.getElementById("showHakkimdaBtn").addEventListener("click", function(e) {
+            e.preventDefault();
+            const hakkimda = document.getElementById("hakkimda");
             if (hakkimda.style.display === "none" || hakkimda.style.display === "") {
-                hakkimda.style.display = "block"; // Metni göster
+                hakkimda.style.display = "block";
             } else {
-                hakkimda.style.display = "none"; // Metni gizle
+                hakkimda.style.display = "none";
             }
+        });
+
+        // Kategori butonları ile bölümler arası geçiş
+        const kategoriButonlari = document.querySelectorAll(".kategoriBtn");
+        const kategoriler = ["felsefe", "deney", "kitap"];
+
+        kategoriButonlari.forEach(btn => {
+            btn.addEventListener("click", function() {
+                // Aktif butonu güncelle
+                kategoriButonlari.forEach(b => b.classList.remove("active"));
+                this.classList.add("active");
+
+                // Bölümleri göster/gizle
+                kategoriler.forEach(k => {
+                    const bolum = document.getElementById(k);
+                    if (k === this.dataset.kategori) {
+                        bolum.classList.add("active");
+                    } else {
+                        bolum.classList.remove("active");
+                    }
+                });
+
+                // Hakkımda bölümü gizle
+                document.getElementById("hakkimda").style.display = "none";
+            });
         });
     </script>
 
 </body>
 </html>
-
-
 
 
 
